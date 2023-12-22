@@ -1,0 +1,26 @@
+main {
+    background: linear-gradient(to bottom, #000000 80%, #04011f);
+
+    color: aliceblue;
+
+
+
+
+}
+
+.fundo {
+    background-image: url(../img/biel.jpg);
+    object-fit: cover;
+    border: white solid 5px;
+    background-position: right center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+}
