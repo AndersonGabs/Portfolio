@@ -1,26 +1,64 @@
 main {
-    background: linear-gradient(to bottom, #000000 80%, #04011f);
+    /* background: linear-gradient(to bottom, #000000 80%, #04011f); */
 
     color: aliceblue;
 
 
 
 
+
 }
 
-.fundo {
-    background-image: url(../img/biel.jpg);
-    object-fit: cover;
-    border: white solid 5px;
-    background-position: right center;
-    background-size: 50%;
-    background-repeat: no-repeat;
+@font-face {
+    font-family: komikax;
+    src: url(../font/KOMIKAX_.ttf);
+}
+
+:root {
+    --corPrimaria: #09f0f0;
+
+}
+
+.komikax {
+    font-family: komikax;
+    font-style: italic;
+    /* color: var(--corPrimaria); */
+    letter-spacing: 2px;
     
+}
+.borda{
+    border-bottom: 2px solid var(--corPrimaria);
+
+    
+}
+span {
+color: white;
+
+}
+
+
+
+
+.fundo {
+    background-image: url(../img/para-aderson.png);
+    object-fit: cover;
+
+    background-size: cover;
+    background-position: center center;
+    min-width: 100vw;
+    min-height: 70vh;
+
+
+
+    background-repeat: no-repeat;
+
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-self: center;
+    background: none;
+    height: max-content;
 
 }
