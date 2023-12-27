@@ -34,15 +34,15 @@ main {
 
 .komikax {
     font-family: komikax;
-    font-style: italic;
+    /* font-style: italic; */
     /* color: var(--corPrimaria); */
     letter-spacing: 2px;
 
 }
 
 .borda {
-    border-bottom: 1px solid var(--corSecundaria);
-    box-shadow: 0 10px 130px 8px var(--corSecundaria);
+
+    text-shadow: 0 0px 3px var(--corSecundaria);
     border-radius: 100%;
 
 
@@ -108,12 +108,13 @@ span {
     border-radius: 200px;
     background: linear-gradient(to right, rgba(48, 48, 48, 1) 0%, rgba(19, 159, 224, 1) 50%, rgba(48, 48, 48, 1) 100%);
     transition: 0.5s ease;
-    
+
 
 }
-.nav-link:focus{
+
+.nav-link:focus {
     color: var(--corSecundaria);
-    
+
 }
 
 .nav-link:hover::after {
@@ -121,25 +122,68 @@ span {
     width: 100%;
     ;
 }
-.ativoColor{
-    
 
-color: var(--corSecundaria);
+.ativoColor {
+
+    text-shadow: 0 0px 5px var(--corSecundaria);
+    color: var(--corSecundaria);
 }
- .ativo::after{
-    
-    color:var(--corSecundaria);
+
+.ativo::after {
+
+    color: var(--corSecundaria);
     content: " ";
-     display: block; 
+    display: block;
     width: 100%;
     height: 1px;
     border-radius: 200px;
     background: linear-gradient(to right, rgba(48, 48, 48, 1) 0%, rgba(19, 159, 224, 1) 50%, rgba(48, 48, 48, 1) 100%);
-    
+
     /* border-bottom: 1px solid var(--corSecundaria); */
+
+
+
+
+
+}
+
+.borda::after {
+    margin: auto;
+    margin-top: 7px;
+    color: var(--corSecundaria);
+    content: " ";
+    display: block;
+    width: 70%;
+    height: 1px;
+
+    border-radius: 200px;
+    background: linear-gradient(to right, rgba(48, 48, 48, 1) 0%, rgba(19, 159, 224, 1) 50%, rgba(48, 48, 48, 1) 100%);
+
+    /* border-bottom: 1px solid var(--corSecundaria); */
+}
+.azonix{
+    font-family: azonix;
+    color: var(--corSecundaria);
+    letter-spacing: 3px;
+}
+#nome{
+    font-family: azonix;
+    text-transform: uppercase;
     
-    
-    
-    
-    
-} 
+}
+#nome::after{
+    content: '|';
+    margin-left: 4px;
+    opacity: 1;
+    animation: pisca 0.7s infinite;
+    color: var(--corPrimaria);
+
+}
+@keyframes pisca{
+0% , 100%{
+    opacity: 1;
+}
+50%{
+    opacity: 0;
+}
+}
