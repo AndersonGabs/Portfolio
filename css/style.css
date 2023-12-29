@@ -42,7 +42,7 @@ main {
 
 .borda {
 
-    text-shadow: 0 0px 3px var(--corSecundaria);
+    text-shadow: 0 0px 120px var(--corSecundaria);
     border-radius: 100%;
 
 
@@ -166,24 +166,11 @@ span {
     color: var(--corSecundaria);
     letter-spacing: 3px;
 }
-#nome{
+.text{
     font-family: azonix;
     text-transform: uppercase;
     
 }
-#nome::after{
-    content: '|';
-    margin-left: 4px;
-    opacity: 1;
-    animation: pisca 0.7s infinite;
-    color: var(--corPrimaria);
-
-}
-@keyframes pisca{
-0% , 100%{
-    opacity: 1;
-}
-50%{
-    opacity: 0;
-}
-}
+.text .dud.colored {
+    color: var(--corPrimaria); /* Substitua 'red' pela cor desejada */
+  }
