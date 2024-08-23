@@ -85,7 +85,7 @@ span {
 
 .nav-link {
     font-family: azonix;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: white;
     font-size: 14px;
     height: 32px;
@@ -97,7 +97,7 @@ span {
 
 .nav-link:hover {
     color: var(--corSecundaria);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .nav-link::after {
@@ -174,3 +174,16 @@ span {
 .text .dud.colored {
     color: var(--corPrimaria); /* Substitua 'red' pela cor desejada */
   }
+
+.navbar-toggler{
+    color: var(--corSecundaria);
+    border-color: 1px solid var(--corSecundaria);
+}
+.navbar-toggler-icon{
+   background: none;
+   
+}
+.navbar-collapse{
+    margin: auto;
+   
+}
