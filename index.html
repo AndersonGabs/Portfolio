@@ -1,111 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio - Informações Pessoais e Projetos">
-    <meta name="keywords" content="Portfolio, Anderson, Guaratinguetá, desenvolvedor web, TI, JS, dev">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio - Informações Pessoais e Projetos"
+    />
+    <meta
+      name="keywords"
+      content="Portfolio, Anderson, Guaratinguetá, desenvolvedor web, TI, JS, dev"
+    />
     <title>Portfólio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-<body class="m-0">
-    <main class="container-fluid m-0 p-0">
-        <div class=" row fundo m-0 p-0 ">
-            <div class="row m-auto divisao">
-                <!--inicio div 1-->
-                <header class="row  m-0 p-2 pe-4 pt-3">
-                    <nav class="navbar col-12 m-auto mt-0  navbar-expand-md d-flex">
-                        <a class="navbar-brand ms-3 komikax  borda fs-1" href="#"
-                            style="color: var(--corPrimaria);">P<span>O</span>R<span>T</span>F<span>O</span>L<span>I</span>o
-                            <!-- <div class="col-9 m-auto mt-2 borda"></div> -->
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <div class="navbar-toggler-icon"><i class="bi bi-list fs-3"></i></div>
+  <body class="m-0 row">
+       <div id="root" ></div>
+      
+        
+          <!--inicio div 1-->
+          <header class="row    py-2    m-0">
+            <nav
+              class="navbar  col-12 m-auto px-5 mt-0 navbar-expand-md d-flex">
+              <a href="#" class="logo align-items-center justify-content-center d-flex ">Anderson&#8201; <span> Gabriel</span></a>
+            
+            
+              <!--<a
+                class="navbar-brand ms-3 komikax borda fs-1"
+                href="#"
+                style="color: var(--corSecundaria)"
+                >P<span>O</span>R<span>T</span>F<span>O</span>L<span>I</span>o
+                 <div class="col-9 m-auto mt-2 borda"></div> 
+              </a>-->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <div class="navbar-toggler-icon">
+                  <i class="bi bi-list fs-3"></i>
+                </div>
+              </button>
 
-                        </button>
+              <div
+                class="collapse navbar-collapse"
+                id="navbarTogglerDemo02"
+                style="justify-content: end"
+              >
+                <ul
+                  class="navbar-nav mt-2 mt-lg-0 col-md-10 col-lg-8 "
+                  style="justify-content: space-around; align-items: center;"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link ativo ativoColor px-0" href="#">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0" href="#">About me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0" href="#">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0" href="#">PROJEcts</a>
+                  </li>
 
-                        <div class="collapse  navbar-collapse  " id="navbarTogglerDemo02"
-                            style="justify-content: end;  ">
-                            <ul class="navbar-nav mt-2 mt-lg-0 col-md-12 col-lg-8"
-                                style="justify-content: space-between; align-items: center ">
-                                <li class="nav-item ">
-                                    <a class="nav-link ativo  ativoColor px-0" href="#">HOME</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0" href="#">SOBRE MIM</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0" href="#">HABILIDADES</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0" href="#">PROJETOS</a>
-                                </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-0" href="#">CONTActs</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+          <main class="container-fluid   m-0 p-0 mt-3">
+          <section class="p-sm-5 row d-flex   ">
+            <div class="col-md-7 ms-5 home-content  col-12 p-5">
+              <h1 class="py-2  fs-2">Hi, It's <span>Anderson</span></h1>
+              <h3 class="fs-4 text-animation">I'm a <span></span></h3>
 
-                                <li class="nav-item">
-                                    <a class="nav-link px-0" href="#">CONTATO</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-
-                </header>
-                <section class=" p-sm-5 p-2">
-                    <div class=" col-md-8 col-12 p-5">
-                        <h3 class="py-2 fs-6 azonix">Desenvolvedor Web</h3>
-                        <h1 class="fs-1 text">Anderson Gabriel</h1>
-
-                        <p class=" pt-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident,
-                            dignissimos repellat. Rerum
-                            ipsa itaque modi vero, quo deleniti! Beatae possimus dolorem sed laudantium laborum maxime.
-                            Ab
-                            quo adipisci delectus alias consectetur accusantium dignissimos optio sit.</p>
-                        <div>
-                            <i class="bi bi-instagram fs-3 botao"></i>
-                            <i class="bi bi-facebook fs-3 botao ms-3"></i>
-                            <i class="bi bi-whatsapp fs-3 botao ms-3"></i>
-                            <i class="bi bi-github fs-3 botao ms-3"></i>
-                            <i class="bi bi-linkedin fs-3 botao ms-3"></i>
-                        </div>
-                    </div>
-
-                </section>
-
-
-
+              <p class="pt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Provident, dignissimos repellat. Rerum ipsa itaque modi vero,
+                quo deleniti! Beatae possimus dolorem sed laudantium laborum
+                maxime. Ab quo adipisci delectus alias consectetur accusantium
+                dignissimos optio sit.
+              </p>
+              <div>
+                <i class="bi bi-instagram fs-3 botao"></i>
+                <i class="bi bi-facebook fs-3 botao ms-3"></i>
+                <i class="bi bi-whatsapp fs-3 botao ms-3"></i>
+                <i class="bi bi-github fs-3 botao ms-3"></i>
+                <i class="bi bi-linkedin fs-3 botao ms-3"></i>
+              </div>
             </div>
+            <div class="home-img col-md-4 ">
+              <img src="img/foto.png" alt="">
+            </div>
+          </section>
 
         </div>
-        <section class="fundo2">
-            <div>aaaaa Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia reiciendis minus
-                provident consectetur, expedita eius voluptates, architecto eos assumenda vel odio id quidem
-                quia veniam quasi possimus ipsa, impedit vero Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Ea magni quo rerum. Ex asperiores quos itaque adipisci laudantium id
-                molestiae, esse enim possimus temporibus cupiditate ratione maiores culpa commodi dignissimos
-                fuga porro distinctio autem obcaecati, consequatur officiis! Rem sit minus adipisci modi
-                consectetur, quia sint fuga dignissimos totam nemo alias autem commodi dolores expedita sapiente
-                provident dicta facilis voluptatibus nesciunt pariatur tempora doloribus? Saepe qui, doloremque
-                iste obcaecati provident vel voluptatem fuga exercitationem, dignissimos tempore amet cum eaque
-                praesentium culpa laboriosam dolorem minus illum soluta. Odit atque sapiente dicta est
-                molestiae, eos asperiores animi ea. Praesentium beatae est eum corporis?</div>
-        </section>
-
+      </div>
+      <section class="about--me row m-0">
+        <h2></h2>
+        <div class="p-2">
+          aaaaa Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Officia reiciendis minus provident consectetur, expedita eius
+          voluptates, architecto eos assumenda vel odio id quidem quia veniam
+          quasi possimus ipsa, impedit vero Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Ea magni quo rerum. Ex asperiores quos
+          itaque adipisci laudantium id molestiae, esse enim possimus temporibus
+          cupiditate ratione maiores culpa commodi dignissimos fuga porro
+          distinctio autem obcaecati, consequatur officiis! Rem sit minus
+          adipisci modi consectetur, quia sint fuga dignissimos totam nemo alias
+          autem commodi dolores expedita sapiente provident dicta facilis
+          voluptatibus nesciunt pariatur tempora doloribus? Saepe qui,
+          doloremque iste obcaecati provident vel voluptatem fuga
+          exercitationem, dignissimos tempore amet cum eaque praesentium culpa
+          laboriosam dolorem minus illum soluta. Odit atque sapiente dicta est
+          molestiae, eos asperiores animi ea. Praesentium beatae est eum
+          corporis?
+        </div>
+      </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>
