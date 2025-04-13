@@ -214,7 +214,7 @@ html {
   text-decoration: none;
   color: white;
   font-weight: 800;
-  font-size: clamp(1rem, 3.5vw, 1.2rem);
+  font-size: clamp(0.8rem, 3.3vw, 1.2rem);
   cursor: pointer;
   transition: 0.3s ease;
   letter-spacing: 5px;
