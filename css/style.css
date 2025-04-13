@@ -185,7 +185,7 @@ html {
 .navbar-toggler {
   color: var(--mainColor);
   border-color: 1px solid var(--corSecundaria);
-  margin: auto;
+  margin-right: 0;
 }
 .navbar-toggler-icon {
   background: none;
@@ -214,7 +214,7 @@ html {
   text-decoration: none;
   color: white;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
   cursor: pointer;
   transition: 0.3s ease;
   letter-spacing: 5px;
