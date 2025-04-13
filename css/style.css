@@ -219,6 +219,11 @@ html {
   transition: 0.3s ease;
   letter-spacing: 5px;
 }
+@media (max-width: 576px) {
+  header {
+    padding: 2rem 1rem; /* menos espaço nas laterais */
+  }
+}
 .logo:hover {
   transform: scale(1.1);
 }
