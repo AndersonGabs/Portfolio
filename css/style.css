@@ -179,12 +179,13 @@ html {
   text-transform: uppercase;
 }
 .text .dud.colored {
-  color: var(--corPrimaria); /* Substitua 'red' pela cor desejada */
+  color: var(--corPrimaria);
 }
 
 .navbar-toggler {
   color: var(--mainColor);
   border-color: 1px solid var(--corSecundaria);
+  margin: auto;
 }
 .navbar-toggler-icon {
   background: none;
@@ -243,8 +244,9 @@ span {
   line-height: 1;
 }
 
-.home-img {
+/*.home-img {
   border-radius: 50%;
+  background-color: yellowgreen;
 }
 .home-img img {
   position: relative;
@@ -254,10 +256,54 @@ span {
   box-shadow: 0 0 25px var(--mainColor);
   cursor: pointer;
   transition: 0.4s ease-in-out;
+}*/
+
+/*.home-img {
+  width: 25vw;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  background-color: var(--corSecundaria);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+}*/
+.home-img {
+  width: 25vw;
+  max-width: 300px;
+  height: fit-content;
+  justify-self: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ffee 0%, #003d3d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 0 30px #00ffee, 0 0 60px #00ffee88;
 }
-.home-img img:hover {
-  box-shadow: 0 0 25px var(--mainColor), 0 0 50px var(--mainColor),
-    0 0 80px var(--mainColor);
+.home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Preenche tudo sem distorcer */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  top: 20px;
+}
+.home-img:hover {
+  box-shadow: 0 0 20px #00ffee, 0 0 40px #00ffee, 0 0 80px #00ffee,
+    0 0 100px #007777;
+  transform: scale(1.03);
+  transition: 0.4s ease-in-out;
+}
+@media (max-width: 767.98px) {
+  .section1 {
+    margin-top: 120px;
+  }
 }
 .text-animation {
   font-size: 34px;
