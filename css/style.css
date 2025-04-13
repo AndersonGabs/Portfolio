@@ -305,6 +305,18 @@ span {
     margin-top: 120px;
   }
 }
+
+@media (max-width: 768px) {
+  .home-img {
+    width: 40vw; /* ou 60vw se quiser maior */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-img {
+    width: 60vw;
+  }
+}
 .text-animation {
   font-size: 34px;
   font-weight: 600;
