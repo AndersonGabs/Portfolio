@@ -463,7 +463,7 @@ span {
 .timeline--content {
   background-color: var(--bgcolor);
   border: 3px solid var(--mainColor);
-  padding: 30px 50px;
+  padding: 30px 30px;
   border-radius: 4rem;
   box-shadow: 0 0 10px var(--mainColor);
   cursor: pointer;
@@ -477,6 +477,6 @@ span {
 
 .timeline--content h3 {
   font-size: 20px;
-  color: white;
+  color: var(--mainColor);
   margin: 0 0 10px;
 }
