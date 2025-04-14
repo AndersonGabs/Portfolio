@@ -480,3 +480,44 @@ span {
   color: var(--mainColor);
   margin: 0 0 10px;
 }
+
+.timeline--content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bgcolor);
+  width: 50px;
+}
+@media (max-width: 576px) {
+  .timeline--item {
+    margin-bottom: 10px; /* Reduz margem inferior */
+  }
+  .timeline--item:nth-child(odd) {
+    padding-right: 10px; /* Menos espaço à direita */
+  }
+  .timeline--item:nth-child(even) {
+    padding-left: 10px; /* Menos espaço à esquerda */
+  }
+  .timeline--content {
+    padding: 10px; /* Reduz padding */
+    border-radius: 2rem; /* Bordas menos arredondadas pra economizar espaço */
+  }
+  .timeline--content h3 {
+    font-size: 16px; /* Fonte menor */
+  }
+  .timeline--date {
+    font-size: 16px; /* Fonte menor */
+    margin: 4px 0 8px; /* Margem reduzida */
+    padding-left: 90px; /* Aproxima a data do ponto */
+    padding-right: 90px;
+  }
+}
