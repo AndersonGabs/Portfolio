@@ -314,7 +314,8 @@ span {
 
 @media (max-width: 768px) {
   .home-img {
-    width: 40vw; /* ou 60vw se quiser maior */
+    width: 40vw;
+    /* ou 60vw se quiser maior */
   }
 }
 
@@ -322,7 +323,14 @@ span {
   .home-img {
     width: 60vw;
   }
+  .home-img img {
+    top: 150px;
+  }
+  .heading {
+    font-size: 2rem;
+  }
 }
+
 .text-animation {
   font-size: 34px;
   font-weight: 600;
@@ -405,11 +413,11 @@ span {
 .heading {
   font-size: 4rem;
   text-align: center;
-  margin: 7rem 0;
+  margin: 5rem 0 2rem;
 }
 .about--me {
   padding: 50px 15px;
-  background: var(--bgcolor);
+  background: black;
 }
 
 .about--me h2 {
@@ -523,8 +531,19 @@ span {
   }
 }
 
+.info--experience {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+.info--experience span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
 @media (max-width: 480px) {
-  .heading {
-    font-size: 2rem;
+  .info--experience {
+    font-size: 15px;
   }
 }
