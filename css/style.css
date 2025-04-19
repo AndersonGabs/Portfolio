@@ -547,3 +547,18 @@ span {
     font-size: 15px;
   }
 }
+.brand--hard h4,
+.brand--soft h4 {
+  border: 1px solid white;
+  margin: auto 0;
+  text-align: center;
+}
+.skills-section {
+  position: relative; /* Só essa seção vai ser relativa */
+}
+
+.bordameio {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2); /* super leve */
+}
