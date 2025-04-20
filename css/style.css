@@ -557,8 +557,33 @@ span {
   position: relative; /* Só essa seção vai ser relativa */
 }
 
+.divider {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+}
+
 .bordameio {
   width: 1px;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.2); /* super leve */
+  height: 80%; /* pode ajustar entre 40% a 80% dependendo da estética */
+  background-color: var(--mainColor); /* linha super leve */
+}
+.skill-icon {
+  width: 100px;
+  height: auto;
+  margin: 10px;
+
+  object-fit: contain;
+}
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+@media (max-width: 480px) {
+  .skill-icon {
+    width: 70%;
+  }
 }
