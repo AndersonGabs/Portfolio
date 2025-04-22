@@ -25,6 +25,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
   <body class="m-0 row">
@@ -94,7 +95,7 @@
               <h1 class="py-2 mx-auto mx-md-0  fs-2 text-center" style="max-width: 500px;">Hi, I'm <span>Anderson</span></h1>
               <h3 class="fs-4 text-animation mx-auto mx-md-0" style="max-width: 500px;">I'm a <span></span></h3>
 
-              <p class="pt-3">
+              <p class="pt-3" id="textaboutme">
                 Passionate about front-end development and programming, currently pursuing a Technologist degree in 
                 Information Technology. I have strong analytical skills and continually seek to expand my abilities 
                 in web development. In my free time, 
@@ -179,12 +180,12 @@
 
         </div>
         <div class="container my-5">
-          <div class="row justify-content-center  border  position-relative">
+          <div class="row justify-content-center position-relative">
         
             <!-- Coluna esquerda -->
-            <div class="col-md-5  text-center ">
+            <div class="col-md-5 col-10 text-center ">
               <h4>Hard Skills</h4>
-              <div class=" border skill-grid row mt-md-5">
+              <div class="  skill-grid row mt-md-5  pt-md-3 pb-3 borderhard pb-md-0  ">
 
               
                 <div class="col-4" >
@@ -206,6 +207,10 @@
                 <div class="col-4">
                   <img class="skill-icon" src="img/bootstrap.svg" alt="bootstrap-icon"><p>Bootstrap</p>
                 </div>
+                <div class="col-4" >
+                  <img class="skill-icon" src="img/git-icon.svg" alt="React-icon"><p>Git</p>
+                 </div>
+                 
                
                 
                
@@ -213,15 +218,47 @@
             </div>
         
             <!-- Linha vertical personalizada -->
-            <div class="divider col-md-1 border "><div class="bordameio m-auto"></div></div>
+            <div class="divider col-md-1  "><div class="bordameio m-auto"></div></div>
         
             <!-- Coluna direita -->
-            <div class="col-md-5  text-center">
+            <div class="col-md-5 col-10 text-center pt-4 pt-md-0  ">
               <h4>Soft Skills</h4>
-              <div class="row border">  
-                <svg>Liderança</svg>
-                <svg>Trabalho em equipe</svg>
-                <svg >Empatia</svg>
+              <div class=" skill-grid bordersoft row mt-md-4 pb-md-4 pb-4 ">
+
+              
+                <div class="col-4" >
+                <img class="skill-icon" src="img/invention-icon.svg" alt="Creativity-icon"><p>Creativity</p>
+                </div>
+                <div class="col-4">
+                <img class="skill-icon" src="img/trabalho-em-equipe.png" alt="teamwork-icon"><p>Teamwork</p> 
+                </div>
+                
+               <div class="col-4">
+                <img class="skill-icon" src="img/empatiaa.png" alt="empathy-icon"> <p>Empathy</p>
+               </div>
+               <div class="col-4">
+                <img class="skill-icon " src="img/leader.png" alt="Leadership-icon"><p>Leadership</p>
+               </div>
+               <div class="col-4">
+                <img class="skill-icon" src="img/habilidad-analitica.png" alt="Analytical-icon"><p>Analytical Thinking</p>
+               </div>
+             
+               
+                
+               
+              </div>
+              <h4 class="mt-4 ">Languages</h4>
+              <div class="languages skill-grid  row mt-md-3">
+                 <div class="col-4">
+                  <img class="skill-icon" src="img/portuguese.svg" alt="bootstrap-icon"><p>Portuguese</p>
+                </div>
+                <div class="col-4">
+                  <img class="skill-icon" src="img/english.svg" alt="bootstrap-icon"><p>English</p>
+                </div>
+                <div class="col-4">
+                  <img class="skill-icon" src="img/spain.svg" alt="bootstrap-icon"><p>Spanish</p>
+                </div>
+               
               </div>
             </div>
         
@@ -231,6 +268,72 @@
        
       </div>
        
+      </section>
+      <section class="projects" id="projects">
+      <div class="projects-box">
+        <h2 class="heading"> Projects </h2>
+        <div class="wrapper  row d-flex  col-10">
+
+        <div class="project-item col-md-3">
+
+        
+            <img src="img/bielll.png" alt="" >
+            <h2>Eletro Master Web page</h2>
+            <div class="rating">
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+          </div>
+            
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio
+               magnam quod, sapiente est totam commodi. Repellat nisi consequuntur nemo dolorum 
+               delectus unde aliquid voluptatem?
+            </p>
+          </div>
+          <div class="project-item col-md-3">
+
+        
+            <img src="img/biiell.png" alt="" >
+            <h2>Eletro Master Web page</h2>
+            <div class="rating">
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+          </div>
+            
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio
+               magnam quod, sapiente est totam commodi. Repellat nisi consequuntur nemo dolorum 
+               delectus unde aliquid voluptatem?
+            </p>
+          </div>
+
+          <div class="project-item col-md-3">
+
+        
+            <img src="img/bielll.png" alt="" >
+            <h2>Eletro Master Web page</h2>
+            <div class="rating">
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+          </div>
+            
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio
+               magnam quod, sapiente est totam commodi. Repellat nisi consequuntur nemo dolorum 
+               delectus unde aliquid voluptatem?
+            </p>
+          </div>
+        </div>
+      </div>
       </section>
       
     </main>
@@ -243,5 +346,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>

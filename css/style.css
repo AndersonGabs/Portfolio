@@ -30,7 +30,7 @@ body {
 }
 
 :root {
-  --bgcolor: #080808;
+  --bgcolor: #0f0f0f;
   --corPrimaria: #09f0f0;
   --corSecundaria: #139fe0;
   --mainColor: #0fe;
@@ -546,15 +546,15 @@ span {
   .info--experience {
     font-size: 15px;
   }
+  #textaboutme {
+    text-align: center;
+  }
 }
 .brand--hard h4,
 .brand--soft h4 {
   border: 1px solid white;
   margin: auto 0;
   text-align: center;
-}
-.skills-section {
-  position: relative; /* Só essa seção vai ser relativa */
 }
 
 .divider {
@@ -564,13 +564,13 @@ span {
 }
 
 .bordameio {
-  width: 1px;
-  height: 80%; /* pode ajustar entre 40% a 80% dependendo da estética */
+  width: 2px;
+  height: 100%; /* pode ajustar entre 40% a 80% dependendo da estética */
   background-color: var(--mainColor); /* linha super leve */
 }
 .skill-icon {
-  width: 100px;
-  height: auto;
+  width: 60px;
+  height: 60px;
   margin: 10px;
 
   object-fit: contain;
@@ -578,12 +578,72 @@ span {
 .skill-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: center;
 }
 
 @media (max-width: 480px) {
   .skill-icon {
-    width: 70%;
+    width: 60%;
   }
+  .borderhard {
+    border-bottom: 2px solid var(--mainColor);
+  }
+}
+.bordersoft {
+  border-bottom: 2px solid var(--mainColor);
+}
+.languages {
+  justify-content: center;
+}
+.projects {
+  background: black;
+  text-align: center;
+}
+.projects-box {
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.projects .heading {
+  margin-bottom: 5rem;
+}
+.projects-box img {
+  width: 7rem;
+  border-radius: 50%;
+  border: 2px solid var(--mainColor);
+  box-shadow: 0 0 15px var(--mainColor);
+  margin-bottom: 20px;
+}
+
+.project-item {
+  min-height: 550px;
+  max-width: 450px;
+  background: var(--bgcolor);
+  border: 3px solid rgba(238, 238, 238, 0.2);
+  border-radius: 2rem;
+  margin: auto;
+  padding: 30px 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.project-item:hover {
+  border: 3px solid var(--mainColor);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 30px var(--mainColor);
+}
+
+.wrapper {
+  justify-content: center;
+}
+#star {
+  color: gold;
 }
