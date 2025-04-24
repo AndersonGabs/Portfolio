@@ -20,12 +20,13 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
+ 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css" /> 
   </head>
 
   <body class="m-0 row">
@@ -116,8 +117,8 @@
 
         </div>
       </div>
-      <section class="about--me"  id="about--me" row m-0>
-        <h2 class="heading col-12" >About me</h2>
+      <section class="about--me"  id="about--me" >
+        <h2 class="heading col-12" >About <span>me</span></h2>
        <div class="timeline--items mb-5">
         <div class="timeline--item">
             <div class="timeline--dot"></div>
@@ -132,7 +133,7 @@
         </div>
         <div class="timeline--item">
           <div class="timeline--dot">  </div>
-            <div class="timeline--date">2023  -  Atualmente
+            <div class="timeline--date">2023 - Now
             </div>
               <div class="timeline--content">
                  <h3>Electronics Technician <span style="font-size: 14px; color: white;">- Eletro Denis</span></h3>
@@ -172,7 +173,7 @@
       <section class="skills">
       <div>
         <h2 class="heading">Skills</h2>
-        <div class="info--experience row p-md-5 p-1 col-12 col-md-9 m-auto">
+        <div class="info--experience row p-md-5 p-1 col-11 col-md-9 m-auto">
           <p>The main area of expertise is <span>front end development </span> (client side of the web).</p>
           <p>I'm an Web Development Student with knowledge in technologies such as <span>HTML, CSS, Bootstrap,</span> and <span>React.</span>  
             I'm currently learning programming languages like <span>JavaScript</span>  and <span>TypeScript</span> . I have strong soft skills including leadership, <span>creativity</span>, empathy, teamwork, and analytical thinking.
@@ -250,13 +251,13 @@
               <h4 class="mt-4 ">Languages</h4>
               <div class="languages skill-grid  row mt-md-3">
                  <div class="col-4">
-                  <img class="skill-icon" src="img/portuguese.svg" alt="bootstrap-icon"><p>Portuguese</p>
+                  <img class="skill-icon" src="img/brasil.svg" alt="Brasil-icon"><p>Portuguese</p>
                 </div>
                 <div class="col-4">
-                  <img class="skill-icon" src="img/english.svg" alt="bootstrap-icon"><p>English</p>
+                  <img class="skill-icon" src="img/english.svg" alt="english-icon"><p>English</p>
                 </div>
                 <div class="col-4">
-                  <img class="skill-icon" src="img/spain.svg" alt="bootstrap-icon"><p>Spanish</p>
+                  <img class="skill-icon" src="img/spain.svg" alt="spain-icon"><p>Spanish</p>
                 </div>
                
               </div>
@@ -277,7 +278,7 @@
         <div class="project-item mb-5 col-md-3">
 
         
-            <img src="img/spain.svg" alt="" >
+            <img src="img/printeletromaster11.png" alt="" >
             <h2>Eletro Master Web page</h2>
             <div class="rating">
               <i class='bx bxs-star' id="star"></i>
@@ -288,9 +289,10 @@
           </div>
             
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio
-               magnam quod, sapiente est totam commodi. Repellat nisi consequuntur nemo dolorum 
-               delectus unde aliquid voluptatem?
+              This was my first academic project, developed in partnership with a real company. I contributed heavily to most of the code and system structure, with the final version presented to the company.
+Mock data was used for demonstration purposes.
+Technologies: HTML, CSS, JavaScript.
+Project hosted on GitHub Pages.
             </p>
           </div>
           <div class="project-item mb-5 col-md-3">
@@ -335,7 +337,45 @@
         </div>
       </div>
       </section>
+      <!--imicio sessao contact me -->
+
+    <section class="contact" id="contact">
+      <h2 class="heading">
+        Contact <span>Me</span>
+      </h2>
+      <form action="">
+        <div class="row p-3 justify-content-center  ">
+
+        
+          <div class="col-10 col-md-4 ">
+            <div class="input-box row">
+              <input type="text" placeholder="Full Name">
+              <input type="email" placeholder="Email">
+              <input type="tel" placeholder="Phone Number">
+              <input type="text" placeholder="Subject">
+            </div>
+          </div>
       
+          <!-- Coluna da direita -->
+          <div class="col-10 col-md-5 pb-2">
+            <textarea name="" id="message" cols="50" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+          </div>
+      
+        </div>
+      </form>
+
+    </section>
+    <footer class="text-center p-4 mt-5 border-top">
+      <p>Feito com 💙 por <strong>Seu Nome</strong></p>
+      <p>📧 contato@seudominio.com | 📍 São Paulo, Brasil</p>
+      <p>
+        <a href="https://github.com/seuusuario" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+      </p>
+      <p><a href="#top">Voltar ao topo ↑</a></p>
+      <p class="text-muted small">© 2025 Todos os direitos reservados</p>
+    </footer>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
