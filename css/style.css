@@ -580,7 +580,7 @@ span {
 
 @media (max-width: 480px) {
   .skill-icon {
-    width: 60%;
+    width: 80%;
   }
   .borderhard {
     border-bottom: 2px solid var(--mainColor);
@@ -621,7 +621,7 @@ span {
 
 .project-item {
   min-height: 550px;
-  max-width: 450px;
+  max-width: 350px;
   background: var(--bgcolor);
   border: 3px solid rgba(238, 238, 238, 0.2);
   border-radius: 2rem;
@@ -650,9 +650,14 @@ span {
   color: gold;
   margin-bottom: 1rem;
 }
+.legend-project {
+  text-align: left;
+
+  justify-content: space-between;
+}
 
 .project-item h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -693,6 +698,11 @@ span {
   }
   .heading {
     font-size: 3.3rem;
+  }
+  .legend-project p {
+    margin: 0;
+    font-size: smaller;
+    padding: 0;
   }
 }
 

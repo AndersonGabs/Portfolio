@@ -85,3 +85,16 @@ const next = () => {
 
 next();
 */
+
+document
+  .getElementById("card-eletromaster")
+  .addEventListener("click", function () {
+    window.open(
+      "https://andersongabs.github.io/EletroMaster/index.html",
+      "_blank"
+    );
+  });
+
+document.getElementById("card-netflix").addEventListener("click", function () {
+  window.open("https://andersongabs.github.io/Netflix/", "_blank");
+});
