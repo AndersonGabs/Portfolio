@@ -589,6 +589,9 @@ span {
 .bordersoft {
   border-bottom: 2px solid var(--mainColor);
 }
+.borderlanguage {
+  border-top: 2px solid var(--mainColor);
+}
 .languages {
   justify-content: center;
 }
@@ -651,8 +654,6 @@ span {
   margin-bottom: 1rem;
 }
 .legend-project {
-  text-align: left;
-
   justify-content: space-between;
 }
 
@@ -699,10 +700,13 @@ span {
   .heading {
     font-size: 3.3rem;
   }
+
   .legend-project p {
     margin: 0;
     font-size: smaller;
     padding: 0;
+
+    height: 22px;
   }
 }
 
