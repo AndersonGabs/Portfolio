@@ -577,13 +577,30 @@ span {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-@media (max-width: 480px) {
+.atributes--language {
+  text-align: end;
+  padding-right: 0;
+}
+.stars--language {
+  text-align: start;
+  font-size: 0.7rem;
+  align-content: center;
+}
+@media (max-width: 760px) {
   .skill-icon {
     width: 80%;
   }
   .borderhard {
     border-bottom: 2px solid var(--mainColor);
+  }
+  .atributes--language {
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 3px solid red;
+  }
+  .stars--language {
+    text-align: center;
   }
 }
 .bordersoft {
@@ -594,6 +611,8 @@ span {
 }
 .languages {
   justify-content: center;
+  text-align: center;
+  justify-self: center;
 }
 .projects {
   background: black;
@@ -651,7 +670,6 @@ span {
 }
 #star {
   color: gold;
-  margin-bottom: 1rem;
 }
 .legend-project {
   justify-content: space-between;
@@ -661,6 +679,8 @@ span {
   font-size: 1.7rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  text-decoration: underline;
+  color: var(--mainColor);
 }
 .contact {
   background-color: var(--bgcolor);
