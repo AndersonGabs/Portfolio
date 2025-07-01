@@ -69,7 +69,7 @@
   randomChar() {
     return this.chars[Math.floor(Math.random() * this.chars.length)];
   }
-}
+
 const phrases = ["Anderson Gabriel"];
 // Exemplo de uso
 const el = document.querySelector(".text");
