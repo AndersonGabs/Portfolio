@@ -755,3 +755,6 @@ span {
   border-radius: 8px;
   background-color: #000; /* opcional: fundo preto para disfarçar as bordas */
 }
+html {
+  scroll-behavior: smooth;
+}
