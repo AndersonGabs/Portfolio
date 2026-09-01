@@ -1,0 +1,71 @@
+/* ============================================
+   THEME SYSTEM — CSS Custom Properties
+   ============================================ */
+
+/* Dark Theme (default) */
+[data-theme="dark"] {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #101018;
+  --bg-card: #16162a;
+  --bg-card-hover: #1e1e3a;
+  --bg-header: rgba(10, 10, 15, 0.75);
+  --bg-input: #12121f;
+
+  --text-primary: #f0f0f5;
+  --text-secondary: #9a9ab0;
+  --text-muted: #6a6a80;
+
+  --accent-primary: #00e5ff;
+  --accent-secondary: #7c4dff;
+  --accent-gradient: linear-gradient(135deg, #00e5ff 0%, #7c4dff 100%);
+  --accent-gradient-reverse: linear-gradient(135deg, #7c4dff 0%, #00e5ff 100%);
+  --accent-glow: rgba(0, 229, 255, 0.25);
+  --accent-glow-strong: rgba(0, 229, 255, 0.5);
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(0, 229, 255, 0.3);
+
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(0, 229, 255, 0.15);
+  --shadow-glow-strong: 0 0 40px rgba(0, 229, 255, 0.3);
+
+  --timeline-line: #00e5ff;
+  --star-color: #ffd700;
+
+  --glass-bg: rgba(22, 22, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.06);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #f5f5fa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f0ff;
+  --bg-header: rgba(245, 245, 250, 0.8);
+  --bg-input: #f0f0f5;
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #555570;
+  --text-muted: #8888a0;
+
+  --accent-primary: #6366f1;
+  --accent-secondary: #8b5cf6;
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --accent-gradient-reverse: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent-glow-strong: rgba(99, 102, 241, 0.3);
+
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(99, 102, 241, 0.3);
+
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.1);
+  --shadow-glow-strong: 0 0 40px rgba(99, 102, 241, 0.2);
+
+  --timeline-line: #6366f1;
+  --star-color: #f59e0b;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.05);
+}

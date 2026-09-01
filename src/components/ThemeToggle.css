@@ -1,0 +1,72 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-track {
+  width: 52px;
+  height: 28px;
+  border-radius: 14px;
+  position: relative;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-track.dark {
+  background: linear-gradient(135deg, #1a1a3e, #2d1b69);
+  box-shadow: 0 0 12px rgba(124, 77, 255, 0.3), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-track.light {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+              box-shadow 0.4s ease;
+  position: absolute;
+  left: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-track.light .toggle-thumb {
+  transform: translateX(24px);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.toggle-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.toggle-icon.moon {
+  color: #7c4dff;
+}
+
+.toggle-icon.sun {
+  color: #f59e0b;
+}
+
+.theme-toggle:hover .toggle-track {
+  box-shadow: 0 0 20px var(--accent-glow-strong);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
