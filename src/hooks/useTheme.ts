@@ -10,15 +10,12 @@ interface UseThemeReturn {
 
 export function useTheme(): UseThemeReturn {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Check localStorage first
+    // Check localStorage first (respects user's previous choice)
     const stored = localStorage.getItem('portfolio-theme') as Theme | null;
     if (stored === 'dark' || stored === 'light') return stored;
 
-    // Fallback to system preference
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      return 'light';
-    }
-    return 'dark';
+    // No saved preference → default to light on first visit
+    return 'light';
   });
 
   useEffect(() => {
