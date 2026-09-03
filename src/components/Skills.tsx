@@ -19,26 +19,26 @@ interface Language {
 }
 
 const HARD_SKILLS: HardSkill[] = [
-  { name: 'JavaScript', icon: 'img/javascript.svg', stars: 2 },
-  { name: 'HTML5', icon: 'img/html-icon.svg', stars: 3 },
-  { name: 'CSS3', icon: 'img/css-icon.svg', stars: 3 },
-  { name: 'React', icon: 'img/react-js-icon.svg', stars: 2 },
-  { name: 'Bootstrap', icon: 'img/bootstrap.svg', stars: 3 },
-  { name: 'Git', icon: 'img/git-icon.svg', stars: 2 },
+  { name: 'JavaScript', icon: '/img/javascript.svg', stars: 2 },
+  { name: 'HTML5', icon: '/img/html-icon.svg', stars: 3 },
+  { name: 'CSS3', icon: '/img/css-icon.svg', stars: 3 },
+  { name: 'React', icon: '/img/react-js-icon.svg', stars: 2 },
+  { name: 'Bootstrap', icon: '/img/bootstrap.svg', stars: 3 },
+  { name: 'Git', icon: '/img/git-icon.svg', stars: 2 },
 ];
 
 const SOFT_SKILLS: SoftSkill[] = [
-  { name: 'Creativity', icon: 'img/invention-icon.svg' },
-  { name: 'Teamwork', icon: 'img/trabalho-em-equipe.png' },
-  { name: 'Empathy', icon: 'img/empatiaa.png' },
-  { name: 'Leadership', icon: 'img/leader.png' },
-  { name: 'Analytical Thinking', icon: 'img/habilidad-analitica.png' },
+  { name: 'Creativity', icon: '/img/invention-icon.svg' },
+  { name: 'Teamwork', icon: '/img/trabalho-em-equipe.png' },
+  { name: 'Empathy', icon: '/img/empatiaa.png' },
+  { name: 'Leadership', icon: '/img/leader.png' },
+  { name: 'Analytical Thinking', icon: '/img/habilidad-analitica.png' },
 ];
 
 const LANGUAGES: Language[] = [
-  { name: 'Portuguese', icon: 'img/portuguese.svg', level: 'Native' },
-  { name: 'English', icon: 'img/english.svg', level: 'B2' },
-  { name: 'Spanish', icon: 'img/spain.svg', level: 'B2' },
+  { name: 'Portuguese', icon: '/img/portuguese.svg', level: 'Native' },
+  { name: 'English', icon: '/img/english.svg', level: 'B2' },
+  { name: 'Spanish', icon: '/img/spain.svg', level: 'B2' },
 ];
 
 function Stars({ count }: { count: number }) {

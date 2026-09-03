@@ -22,7 +22,7 @@ const DEV_PROJECTS: Project[] = [
     technologies: 'Expo, React Native, Firebase, JavaScript.',
     techDetail: 'Cross-platform mobile app',
     stars: 3,
-    images: ['img/fruti1.png', 'img/Fruti2.jpeg', 'img/fruti3.jpeg', 'img/fruti4.jpeg', 'img/fruti5.jpeg'],
+    images: ['/img/fruti1.png', '/img/Fruti2.jpeg', '/img/fruti3.jpeg', '/img/fruti4.jpeg', '/img/fruti5.jpeg'],
   },
   {
     id: 'eletromaster-web',
@@ -31,7 +31,7 @@ const DEV_PROJECTS: Project[] = [
     technologies: 'HTML, CSS, Bootstrap, JavaScript.',
     techDetail: 'Project hosted on GitHub',
     stars: 3,
-    images: ['img/printeletromaster11.png'],
+    images: ['/img/printeletromaster11.png'],
     link: 'https://andersongabs.github.io/EletroMaster/index.html',
   },
   {
@@ -41,7 +41,7 @@ const DEV_PROJECTS: Project[] = [
     technologies: 'React, CSS, TMDb API.',
     techDetail: 'Project hosted on GitHub Pages',
     stars: 2,
-    images: ['img/netflix1.png'],
+    images: ['/img/netflix1.png'],
     link: 'https://andersongabs.github.io/Netflix/',
   },
   {
@@ -51,7 +51,7 @@ const DEV_PROJECTS: Project[] = [
     technologies: 'Power Apps, SharePoint, Power BI.',
     techDetail: '',
     stars: 2,
-    images: ['img/power.jpg'],
+    images: ['/img/power.jpg'],
   },
   {
     id: 'ipb-transportes',
@@ -60,7 +60,7 @@ const DEV_PROJECTS: Project[] = [
     technologies: 'Expo, React Native, TypeScript, Firebase, LottieFiles.',
     techDetail: 'Academic project — IPB',
     stars: 3,
-    images: ['img/preview.png'],
+    images: ['/img/preview.png'],
   },
   {
     id: 'hemisfério-didatico',
@@ -69,7 +69,7 @@ const DEV_PROJECTS: Project[] = [
     technologies: 'Next.js, React, Tailwind CSS, Firebase.',
     techDetail: 'Live website',
     stars: 3,
-    images: ['img/hemisferioprint.png'],
+    images: ['/img/hemisferioprint.png'],
     link: 'https://hemisferiodidatico.pt/',
   },
 ];

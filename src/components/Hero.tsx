@@ -50,7 +50,7 @@ export function Hero() {
 
       {/* ── Background image (always full-cover, never changes with theme) ── */}
       <div className="hero__bg">
-        <img src="img/gabrielhero.jpg" alt="Anderson Gabriel" className="hero__bg-img" />
+        <img src="/img/gabrielhero.jpg" alt="Anderson Gabriel" className="hero__bg-img" />
         <div className="hero__overlay hero__overlay--left" />
         <div className="hero__overlay hero__overlay--right" />
       </div>

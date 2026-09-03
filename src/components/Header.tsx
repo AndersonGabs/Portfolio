@@ -47,7 +47,7 @@ export function Header({ isDark, onToggleTheme }: HeaderProps) {
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="header__inner">
         <a href="#home" className="header__logo">
-          <img src="img/logo.png" alt="Anderson Gabriel" className="header__logo-img" />
+          <img src="/img/logo.png" alt="Anderson Gabriel" className="header__logo-img" />
         </a>
 
         <button

@@ -29,7 +29,7 @@ export function Footer() {
       <div className="container footer__inner">
         {/* Logo / Brand */}
         <a href="#home" className="footer__brand">
-          <img src="img/logo.png" alt="Anderson Gabriel" className="footer__brand-img" />
+          <img src="/img/logo.png" alt="Anderson Gabriel" className="footer__brand-img" />
         </a>
 
         {/* Tagline */}
