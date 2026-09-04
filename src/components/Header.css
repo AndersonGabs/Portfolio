@@ -1,32 +1,64 @@
+/* ============================================
+   HEADER — Glassmorphism Nav
+   ============================================ */
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 0.2rem 0;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+  padding: 0;
+
+  /* Glass always visible */
+  background: var(--glass-nav-bg);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid var(--glass-nav-border);
+  box-shadow: 0 2px 24px var(--glass-nav-shadow);
+
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 }
 
+/* Slightly deeper glass when scrolled */
 .header--scrolled {
-  background: var(--bg-header);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-  padding: 0.2rem 0;
-  border-bottom: 1px solid var(--border-color);
+  background: var(--glass-nav-bg-scrolled);
+  box-shadow: 0 4px 40px var(--glass-nav-shadow-scrolled);
 }
 
+/* Accent line at the very bottom */
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  background: var(--accent-gradient);
+  opacity: 0.35;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.header--scrolled::after {
+  opacity: 0.65;
+}
+
+/* ── Inner ── */
 .header__inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1.5rem;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo */
+/* ── Logo ── */
 .header__logo {
   font-family: 'Azonix', 'Outfit', sans-serif;
   font-size: clamp(0.9rem, 2.5vw, 1.2rem);
@@ -34,114 +66,118 @@
   color: var(--text-primary);
   text-decoration: none;
   letter-spacing: 3px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
   white-space: nowrap;
 }
 
 .header__logo:hover {
-  transform: scale(1.05);
-  color: var(--text-primary);
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 8px var(--accent-glow-strong));
 }
 
 .header__logo-img {
-  height: 70px;
-  width: 10rem;
+  height: 56px;
+  width: 9rem;
   display: block;
   object-fit: contain;
 }
 
-
-/* Navigation */
+/* ── Navigation ── */
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .header__nav-list {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
   margin: 0;
   padding: 0;
+
+  /* Pill container */
+  background: var(--nav-pill-track);
+  border: 1px solid var(--nav-pill-track-border);
+  border-radius: 2rem;
+  padding: 0.3rem 0.4rem;
+  backdrop-filter: blur(8px);
 }
 
+/* ── Nav Links ── */
 .header__nav-link {
   font-family: 'Azonix', 'Inter', sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 1.5rem;
   position: relative;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.header__nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--accent-gradient);
-  border-radius: 1px;
-  transition: width 0.3s ease;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
 }
 
 .header__nav-link:hover {
   color: var(--accent-primary);
+  background: var(--nav-link-hover-bg);
+  transform: translateY(-1px);
 }
 
-.header__nav-link:hover::after {
-  width: 70%;
-}
-
+/* Active pill — gradient background */
 .header__nav-link--active {
-  color: var(--accent-primary);
+  background: var(--accent-gradient);
+  color: #fff !important;
+  box-shadow: 0 2px 16px var(--accent-glow);
 }
 
-.header__nav-link--active::after {
-  width: 70%;
+.header__nav-link--active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px var(--accent-glow-strong);
 }
 
-/* Hamburger */
+/* ── Hamburger ── */
 .header__hamburger {
   display: none;
   background: none;
-  border: none;
+  border: 1.5px solid var(--border-color);
+  border-radius: 0.5rem;
   cursor: pointer;
-  padding: 8px;
+  padding: 8px 10px;
   flex-direction: column;
   gap: 5px;
   z-index: 101;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.header__hamburger:hover {
+  border-color: var(--accent-primary);
+  background: var(--nav-link-hover-bg);
 }
 
 .header__hamburger span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
 }
 
-.header__hamburger.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.header__hamburger:hover span {
+  background: var(--accent-primary);
 }
 
-.header__hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
+.header__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header__hamburger.open span:nth-child(2) { opacity: 0; }
+.header__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.header__hamburger.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-/* Mobile */
+/* ── Mobile drawer ── */
 @media (max-width: 768px) {
   .header__hamburger {
     display: flex;
@@ -151,29 +187,59 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 270px;
     height: 100vh;
-    background: var(--bg-secondary);
+
+    /* Glass drawer */
+    background: var(--glass-drawer-bg);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border-left: 1px solid var(--glass-nav-border);
+    box-shadow: -12px 0 48px var(--glass-nav-shadow-scrolled);
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
-    border-left: 1px solid var(--border-color);
+    gap: 1.5rem;
+    transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header__nav--open {
     right: 0;
   }
 
+  /* Reset pill track on mobile */
   .header__nav-list {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.4rem;
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 
   .header__nav-link {
-    font-size: 0.85rem;
-    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    padding: 0.7rem 2rem;
+    width: 180px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition:
+      color 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .header__nav-link:hover {
+    border-color: var(--accent-primary);
+    transform: none;
+  }
+
+  .header__nav-link--active {
+    background: var(--accent-gradient);
+    color: #fff !important;
+    border-color: transparent;
+    box-shadow: 0 2px 20px var(--accent-glow-strong);
   }
 }

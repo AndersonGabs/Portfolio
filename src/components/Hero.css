@@ -290,76 +290,179 @@
    ========================================== */
 
 @media (max-width: 900px) {
-  .hero__title { font-size: clamp(1.6rem, 5vw, 2.6rem); }
+  .hero__title { font-size: clamp(1.4rem, 4.5vw, 2.4rem); }
   .hero__side-content { max-width: 46%; }
   .hero__desc { font-size: 0.75rem; }
 }
 
-@media (max-width: 640px) {
+/* ── Tablet (≤ 768px) ── */
+@media (max-width: 768px) {
+  .hero__title { font-size: clamp(1.2rem, 5vw, 2rem); }
+  .hero__role-label,
+  .hero__role-typed { font-size: 0.82rem; }
+  .hero__desc { font-size: 0.72rem; }
+  .hero__side-content { max-width: 48%; }
+}
+
+/* ── Mobile (≤ 600px) ──
+   Layout: image block on top (full image visible) + content below
+   ---------------------------------------------------------------- */
+@media (max-width: 600px) {
+
+  /* Hero becomes a normal block (no fixed height) */
   .hero {
     height: auto;
-    min-height: 100svh;
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Image block: fixed height, full image centered, no crop ── */
+  .hero__bg {
+    position: relative;   /* out of absolute flow */
+    inset: unset;
+    width: 100%;
+    height: 55vw;         /* proportional to screen width */
+    min-height: 220px;
+    max-height: 340px;
+    flex-shrink: 0;
+    overflow: hidden;
   }
 
   .hero__bg-img {
-    object-position: 40% 10%;  /* keep face visible on portrait */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;  /* show face/head, image stays whole */
   }
 
-  /* Full-width top overlay on mobile */
+  /* Subtle top & bottom gradients only — keep image visible */
   .hero__overlay--left {
+    position: absolute;
+    inset: unset;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 40%;
     background: linear-gradient(
       to bottom,
-      rgba(4, 4, 12, 0.88) 0%,
-      rgba(4, 4, 12, 0.50) 60%,
+      rgba(4, 4, 12, 0.55) 0%,
       transparent 100%
     );
   }
 
   .hero__overlay--right {
-    width: 100%;
-    height: 50%;
-    top: auto;
+    position: absolute;
+    inset: unset;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
     background: linear-gradient(
       to top,
-      rgba(4, 4, 12, 0.88) 0%,
-      rgba(4, 4, 12, 0.50) 60%,
+      rgba(4, 4, 12, 0.75) 0%,
       transparent 100%
     );
   }
 
-  /* Stack titles */
-  .hero__center-titles {
+  /* ── Content layer: now a normal block below the image ── */
+  .hero__content-layer {
+    position: relative;  /* out of absolute flow */
+    inset: unset;
+    opacity: 1 !important;  /* always visible — not triggered by InView */
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 1.5rem;
+    justify-content: flex-start;
+    gap: 1rem;
+    background: var(--bg-primary);
+    padding: 1.5rem 1rem 2rem;
   }
 
-  .hero__center-left,
+  /* Titles: "Hi, I'm  Anderson" side-by-side on one row */
+  .hero__center-titles {
+    flex-direction: row;        /* keep both halves in one row */
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 0;
+    gap: 0;
+    animation: none;
+    opacity: 1;
+  }
+
+  .hero__center-left {
+    text-align: right;
+    padding-right: 0.4rem;
+    flex: unset;                /* don't stretch, only take content width */
+  }
+
   .hero__center-right {
-    text-align: center;
-    padding: 0;
+    text-align: left;
+    padding-left: 0.4rem;
+    flex: unset;
   }
 
-  /* Stack sides */
+  /* Hide "I'm a" — redundant with the typing animation below */
+  .hero__role-label {
+    display: none;
+  }
+
+  .hero__title {
+    font-size: clamp(1.6rem, 7.5vw, 2.2rem);
+    color: var(--text-primary);
+  }
+
+  /* Override the white-only colour on mobile (now on bg, not over image) */
+  .hero__title--coord {
+    color: var(--text-primary);
+    text-shadow: none;
+  }
+
+  .hero__role-typed {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: left;           /* align with "Anderson" */
+  }
+
+  .hero__typed {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Cursor: visible on light bg */
+  .hero__cursor {
+    -webkit-text-fill-color: var(--accent-primary);
+  }
+
+  /* Sides: stacked, full width */
   .hero__sides {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    padding-bottom: 2rem;
+    gap: 1.25rem;
+    padding-bottom: 0;
+    width: 100%;
   }
 
   .hero__side-content {
-    max-width: 85%;
+    max-width: 100%;
+    width: 100%;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0;
+    animation: none;
+    opacity: 1;
   }
 
   .hero__side-content--left,
   .hero__side-content--right {
-    padding: 0 1.5rem;
+    padding: 0;
     margin-left: 0;
+  }
+
+  .hero__desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
   }
 
   .hero__badges,
@@ -367,5 +470,22 @@
     justify-content: center;
   }
 
-  .hero__tag { text-align: center; }
+  /* Social links: use theme-aware border on light bg */
+  .hero__social-link {
+    color: var(--text-primary);
+    border-color: var(--border-color, rgba(0,0,0,0.15));
+    background: var(--card-bg, rgba(0,0,0,0.05));
+  }
+
+  .hero__badge {
+    color: var(--text-secondary);
+    background: var(--card-bg, rgba(0,0,0,0.05));
+    border-color: var(--border-color, rgba(0,0,0,0.12));
+  }
+
+  .hero__tag {
+    text-align: center;
+    color: var(--accent-primary);
+  }
 }
+
